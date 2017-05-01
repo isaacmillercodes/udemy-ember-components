@@ -4,6 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'components-with-github',
     environment: environment,
+    contentSecurityPolicy: {
+        'connect-src':"'self' https://api.github.com"
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

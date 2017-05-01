@@ -1,0 +1,17 @@
+<div class="panel-heading">
+  <h3 class="panel-title">My Github Repos</h3>
+</div>
+<div class="panel-body">
+  {{#each model as |repo|}}
+    <div class="row">
+      <div class="col-md-4">
+        <img class="thumbnail" style="width: 100%" src="{{repo.owner.avatar_url}}" />
+      </div>
+      <div class="col-md-8">
+        <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+        <p>{{repo.description}}</p>
+        <small>Created: {{format-date repo.created_at}}</small>
+      </div>
+    </div>
+  {{/each}}
+</div>
